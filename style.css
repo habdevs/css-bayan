@@ -1,0 +1,34 @@
+.accordion {
+	margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 600px; /* можно использовать другое значение */
+}
+
+.accordion-header {
+  background-color: #eee;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 100%;
+  text-align: center;
+}
+
+.accordion-item input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+  max-height: 100vh;
+}
